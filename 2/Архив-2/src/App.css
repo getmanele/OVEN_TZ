@@ -1,0 +1,71 @@
+body {
+  margin: 0;
+  font-family: -apple-system, Blink Mac System Font, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  --mac-osx-font-smoothing: grayscale;
+}
+.code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+}
+/* .row {
+    display: flex;
+}
+.cell {
+  width: 100%;
+  text-align: left;
+} */
+.App  {
+  width: 935px;
+  margin: 30px auto 0;
+  border: 1px solid #ddd;
+}
+.product-prices__cell:nth-of-type(3n+1) {
+  padding: 11px 10px 8px 27px;
+  font-weight: 300;
+  color: #343536;
+  border-right-width: 0;
+}
+.product-prices__cell {
+  border-bottom: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  font-size: 15px;
+  line-height: 15px;
+  vertical-align: top;
+}
+
+.pricelist-line-description {
+  font-size: 12px;
+  padding-top: 7px;
+  color: #6f6f6f;
+}
+.product-prices__cell:nth-of-type(3n+2) {
+  text-align: right;
+  color: #008f86;
+  padding: 11px 25px 8px 0;
+  white-space: nowrap;
+}
+.product-prices__cell {
+  border-bottom: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  font-size: 15px;
+  line-height: 15px;
+  vertical-align: top;
+}
+.product-prices__cell:nth-of-type(3n) {
+  width: 175px;
+  border-right-width: 0;
+  text-align: center;
+  padding: 11px 0 8px;
+}
+.product-prices__button {
+  color: #008f86;
+  display: inline-block;
+  text-decoration: underline;
+  text-transform: uppercase;
+  font-size: 13px;
+  cursor: pointer;
+  position: relative;
+}

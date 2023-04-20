@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap" rel="stylesheet">
+  <title>test</title>
+  <link rel="stylesheet" href="css/app.min.css" />
+</head>
+
+<body>
+  <h1>контрольно-измерительные приборы</h1>
+  <hr>
+  <div class="table">
+    <div class="table__left">
+      <div class="table_title__all">
+        <div class="table_title">ПРОГРАММИРУЕМЫЕ ПАРАМЕТРЫ ТРМ212</div>
+        <div class="table_title2">прод.<br>таблицы</div>
+      </div>
+
+      <table style="width: 100%; border-collapse: collapse; text-align: left;" border="1" cellpadding="5">
+        <thead>
+          <tr>
+            <th colspan="1">Обозн.</th>
+            <th colspan="4">Название</th>
+            <th colspan="3">Допустимые значения</th>
+            <th colspan="4">Комментарии</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="bold" colspan="12">Группа AdV. (AdV). Параметры регулирования и «LBA»</td>
+          </tr>
+          <tr>
+            <td colspan="1">inP2</td>
+            <td colspan="4">Функция на Входе 2</td>
+            <td colspan="7">Появляется при r-S = StOP<br>
+              OFF – датчик отключен<br>
+              In.t2 – датчик, заданный в параметре in.t2<br> EVnt – ключ<br>
+              V.Ptr – резистивный датчик положения<br> V.CS – токовый датчик положения</td>
+          </tr>
+          <tr>
+            <td colspan="1">CALC</td>
+            <td colspan="4">Формула вычислителя</td>
+            <td colspan="7">Появляется при inP2 = in.t2<br>
+              A.SUM – средневзвешенная сумма<br>
+              rAt – отношение<br>SQPV – корень из средневзвешенной суммы<br>
+              GrAF – коррекция уставки</td>
+          </tr>
+
+          <tr>
+            <td colspan="1">K1</td>
+            <td colspan="4">Весовой коэффициент для PV1</td>
+            <td colspan="4">– 19,99...99.99</td>
+            <td rowspan="2">Появляется при <br>
+              inP2 = in.t2, CALC 1 GrAF. <br> При CALC = rAt не устанавливать KPV2 = 0</td>
+          </tr>
+          <tr>
+            <td colspan="1">K2</td>
+            <td colspan="4">Весовой коэффициент для PV2</td>
+            <td colspan="4">– 19,99...99.99</td>
+          </tr>
+          <tr>
+            <td colspan="1">SL-L</td>
+            <td colspan="4">Нижняя граница диапазона задания уставки <sup style="font-size: 10px;">1)</sup></td>
+            <td colspan="3">– 1999...3000</td>
+            <td colspan="4">[ед. изм.]</td>
+          </tr>
+          <tr>
+            <td colspan="1">SL-H</td>
+            <td colspan="4">Верхняя граница диапазона задания уставки <sup style="font-size: 10px;">1)</sup></td>
+            <td colspan="3">– 1999...3000</td>
+            <td colspan="4">[ед. изм.]</td>
+          </tr>
+          <tr>
+            <td colspan="1" rowspan="2">MVEr</td>
+            <td colspan="4" rowspan="2">Выходной сигнал в состоянии «ошибка»</td>
+            <td colspan="7"> CLOS – задвижка полностью закрыта <br> HOLd – задвижка удерживается в прежнем сост. <br>
+              OPEn – задвижка полностью открыта</td>
+          </tr>
+          <tr>
+            <td colspan="3">0...100</td>
+            <td colspan="4">[%] Для аналоговой задвижки</td>
+          </tr>
+          <tr>
+            <td colspan="1">MdSt</td>
+            <td colspan="4">Состояние выхода в состоянии «остановка регулирования»</td>
+            <td colspan="7">Появляется только для прибора с ВУ1 аналогового типа:
+              MVSt – заданное параметром MVST. <br>
+              O – последнее значение выходного сигнала.</td>
+          </tr>
+          <tr>
+            <td colspan="1" rowspan="2">OREU</td>
+            <td colspan="4" rowspan="2">Тип управления при регулировании</td>
+            <td colspan="3">Or-r</td>
+            <td colspan="4">«Обратное» управление. Применяется для управления ИМ типа «нагреватель»</td>
+          </tr>
+          <tr>
+            <td colspan="3">Or-d</td>
+            <td colspan="4">«Прямое» управление. Применяется для управления ИМ типа «холодильник»</td>
+          </tr>
+          <tr>
+            <td colspan="1">PV0</td>
+            <td colspan="4">Регулируемая величина при нулевой выходной мощности</td>
+            <td colspan="3">– 100...2000</td>
+            <td colspan="4">[ед. изм.]</td>
+
+          </tr>
+          <tr>
+            <td colspan="1">RAMP</td>
+            <td colspan="4">Режим быстрого выхода на уставку</td>
+            <td colspan="3">OFF <br> ON</td>
+            <td colspan="4">выключен <br> включен</td>
+          </tr>
+          <tr>
+            <td colspan="1">P</td>
+            <td colspan="4">Полоса пропорциональности ПИД-регулятора <sup style="font-size: 10px;">1)</sup></td>
+            <td colspan="3">0,001...9999</td>
+            <td colspan="4">[ед. изм.]</td>
+          </tr>
+          <tr>
+            <td colspan="1">I</td>
+            <td colspan="4">Интегральная постоянная ПИД-регулятора</td>
+            <td colspan="3">0...3999</td>
+            <td colspan="4">[c]</td>
+          </tr>
+          <tr>
+            <td colspan="1">D</td>
+            <td colspan="4">Дифференциальная постоян- ная ПИД-регулятора</td>
+            <td colspan="3">0...3999</td>
+            <td colspan="4">[c]</td>
+          </tr>
+          <tr>
+            <td>Db</td>
+            <td colspan="11">Параметр не используется, для корректной работы должен быть установлен 0,0</td>
+          </tr>
+          <tr>
+            <td colspan="1">VSP</td>
+            <td colspan="4">Скорость изменения уставки <sup style="font-size: 10px;">1)</sup></td>
+            <td colspan="3">0...9999</td>
+            <td colspan="4">[ед.изм/мин]</td>
+          </tr>
+          <tr>
+            <td colspan="1">OL-L</td>
+            <td colspan="4">Минимальная выходная мощ- ность (нижний предел)</td>
+            <td colspan="3">от 0 до OL-H</td>
+            <td colspan="4">[%]</td>
+          </tr>
+          <tr>
+            <td colspan="1">OL-H</td>
+            <td colspan="4">Максимальная выходная мощность (верхний предел)</td>
+            <td colspan="3">от OL-L до 100</td>
+            <td colspan="4">[%]</td>
+          </tr>
+          <tr>
+            <td colspan="1">ALt</td>
+            <td colspan="4">Тип сигнализации о выходе регулир. параметра за заданные пределы</td>
+            <td colspan="3">00...14</td>
+            <td colspan="4">см. таблицу «Типы сигнали- зации о выходе регулируе- мого параметра за заданные пределы»
+            </td>
+          </tr>
+          <tr>
+            <td colspan="1">MVSt</td>
+            <td colspan="4">Выходной сигнал в состоянии «остановка регулирования»</td>
+            <td colspan="7">Аналогично параметру MVEr</td>
+          </tr>
+          <tr>
+            <td colspan="1">LbA</td>
+            <td colspan="4">Время диагностики обрыва контура</td>
+            <td colspan="3">0...9999 0</td>
+            <td colspan="4">[с] <br>
+              Функция определения обры- ва контура не работает</td>
+          </tr>
+          <tr>
+            <td colspan="1">LbAb</td>
+            <td colspan="4">Ширина зоны диагностики обрыва контура <sup style="font-size: 10px;">1)</sup></td>
+            <td colspan="3">0...9999</td>
+            <td colspan="4">[ед. изм.]</td>
+          </tr>
+          <tr>
+            <td colspan="1">AL-d</td>
+            <td colspan="4">Порог срабатывания компа- ратора <sup style="font-size: 10px;">1)</sup></td>
+            <td colspan="3">–1999...3000</td>
+            <td colspan="4">[ед. изм.]</td>
+          </tr>
+          <tr>
+            <td colspan="1">AL-H</td>
+            <td colspan="4">Гистерезис компаратора <sup style="font-size: 10px;">1)</sup></td>
+            <td colspan="3">0...3000</td>
+            <td colspan="4">[ед. изм.]</td>
+          </tr>
+          <tr>
+            <td class="bold" colspan="12">Группа VALV (VALV). Параметры задвижки</td>
+          </tr>
+          <tr>
+            <td colspan="1">V.MO</td>
+            <td colspan="4">Полное время хода задвижки</td>
+            <td colspan="3">5...999</td>
+            <td colspan="4">[c]</td>
+          </tr>
+          <tr>
+            <td colspan="1">V.db</td>
+            <td colspan="4">Зона нечувствительности задвижки</td>
+            <td colspan="3">0...9999 <br> 0...100</td>
+            <td colspan="4">[мс] <br>
+              [%] Для аналоговой задвижки</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+
+
+    <div class="table__right">
+      <div class="table_title__all">
+        <div class="table_title">ПРОГРАММИРУЕМЫЕ ПАРАМЕТРЫ ТРМ212</div>
+        <div class="table_title2">прод.<br>таблицы</div>
+      </div>
+      <table style="width: 100%; border-collapse: collapse; text-align: left;" border="1" cellpadding="5">
+        <thead>
+          <tr>
+            <th colspan="1">Обозн.</th>
+            <th colspan="4">Название</th>
+            <th colspan="3">Допустимые значения</th>
+            <th colspan="4">Комментарии</th>
+          </tr>
+        </thead>
+        <tr>
+          <td colspan="1">V.GAP</td>
+          <td colspan="4">Время выборки люфта задвижки</td>
+          <td colspan="3">0.0...10.0</td>
+          <td colspan="4">[с]</td>
+        </tr>
+        <tr>
+          <td colspan="1">V.rEV</td>
+          <td colspan="4">Минимальное время реверса</td>
+          <td colspan="3">0.0...10.0</td>
+          <td colspan="4">[с]</td>
+        </tr>
+        <tr>
+          <td colspan="1">V.toF</td>
+          <td colspan="4">Пауза между импульсами доводки</td>
+          <td colspan="3">0...9 <br>OFF</td>
+          <td colspan="4">[с] <br>
+            доводчик отключен</td>
+        </tr>
+        <tr>
+          <td class="bold" colspan="12">Группа DISP (DISP). Параметры индикации</td>
+        </tr>
+        <tr>
+          <td colspan="1">diS1</td>
+          <td colspan="4">Режим индикации 1</td>
+          <td colspan="3">OFF <br> On</td>
+          <td colspan="4">Выключен <br>
+            Включен: <br>
+            – на верхнем ЦИ – PV1 <br> – на нижнем ЦИ – SP</td>
+        </tr>
+        <tr>
+          <td colspan="1">diS2</td>
+          <td colspan="4">Режим индикации 2</td>
+          <td colspan="3">OFF <br> On</td>
+          <td colspan="4">Выключен <br>
+            Включен: <br>
+            – на верхнем ЦИ – PV1 <br> – на нижнем ЦИ – PV2</td>
+        </tr>
+        <tr>
+          <td colspan="1">diS3</td>
+          <td colspan="4">Режим индикации 3</td>
+          <td colspan="3">OFF <br> On</td>
+          <td colspan="4">Выключен <br>
+            Включен: <br>
+            – на верхнем ЦИ – LUPV <br> – на нижнем ЦИ – SP</td>
+        </tr>
+        <tr>
+          <td colspan="1">diS4</td>
+          <td colspan="4">Режим индикации 4</td>
+          <td colspan="3">OFF <br> On</td>
+          <td colspan="4">Выключен <br>
+            Включен: <br>
+            – на верхнем ЦИ – PV1 <br> – на нижнем ЦИ – O</td>
+        </tr>
+        <tr>
+          <td colspan="1">diS5</td>
+          <td colspan="4">Режим индикации 5</td>
+          <td colspan="3">OFF <br> On</td>
+          <td colspan="4">Выключен <br>
+            Включен: <br>
+            – на верхнем ЦИ – LUPV <br> – на нижнем ЦИ – O</td>
+        </tr>
+        <tr>
+          <td colspan="1" rowspan="2">rEt</td>
+          <td colspan="4" rowspan="2">Время выхода из режима программирования</td>
+          <td colspan="4">5...99 – [c] время, по истечении которого при- бор возвращается к индикации 1-го параметра
+            группы LVOP.</td>
+        </tr>
+        <tr>
+          <td colspan="4">5...99 – [c] время, по истечении которого при- бор возвращается к индикации 1-го параметра
+            группы LVOP.</td>
+        </tr>
+        <tr>
+          <td class="bold" colspan="12">Группа GrAF (GrAF). Параметры графика коррекции уставки (появляется при CALC = GrAF)</td>
+        </tr>
+        <tr>
+          <td colspan="1">nOdE</td>
+          <td colspan="4">Количество узловых точек графика</td>
+          <td colspan="3">1...10</td>
+          <td colspan="4"></td>
+        </tr>
+        <tr>
+          <td colspan="1">X</td>
+          <td colspan="4">Значение внешнего параме-
+            тра в точке i <sup style="font-size: 10px;">1)</sup></td>
+          <td colspan="3" rowspan="2">–1999...3000</td>
+          <td colspan="4">[ед. изм.]</td>
+        </tr>
+        <tr>
+          <td colspan="1">Y</td>
+          <td colspan="4">Корректирующее значение уставки в точке i 1)</td>
+          <td colspan="4">[ед. изм.]</td>
+        </tr>
+        <tr>
+          <td class="bold" colspan="12">Группа COMM (COMM) Параметры обмена данными по интерфейсу</td>
+        </tr>
+        <tr>
+          <td colspan="1">PROT</td>
+          <td colspan="4">Протокол обмена данными</td>
+          <td colspan="3">OWEN <br> M.RTU <br> M.ASC</td>
+          <td colspan="4">OWEN Modbus <br> RTU Modbus <br> ASCII</td>
+        </tr>
+        <tr>
+          <td colspan="1">bPS</td>
+          <td colspan="4">Скорость обмена в сети</td>
+          <td colspan="3">2,4; 4,8; 9,6; 14,4;19,2; 28,8; 38,4; 57,6; 115,2</td>
+          <td colspan="4">[кбит/с]</td>
+        </tr>
+        <tr>
+          <td colspan="1">A.LEN</td>
+          <td colspan="4">Длина сетевого адреса</td>
+          <td colspan="3">8, 11</td>
+          <td colspan="4">[бит]</td>
+        </tr>
+        <tr>
+          <td colspan="1">Addr</td>
+          <td colspan="4">Базовый адрес прибора в сети</td>
+          <td colspan="3">0...2047</td>
+          <td colspan="4">Запрещается устанавли- вать одинаковые номера нескольким приборам в одной шине</td>
+        </tr>
+        <tr>
+          <td colspan="1">rSdL</td>
+          <td colspan="4">Задержка ответа от прибора по RS-485</td>
+          <td colspan="3">1...45</td>
+          <td colspan="4">[мс]</td>
+        </tr>
+        <tr>
+          <td class="bold" colspan="12">Группа SECr (SECr). Параметры секретности (вход по коду PASS = 100)</td>
+        </tr>
+        <tr>
+          <td colspan="1">OAPt</td>
+          <td colspan="4">Защита параметров от просмотра <sup style="font-size: 10px;">4)</sup></td>
+          <td colspan="7">0 – Разрешен доступ ко всем параметрам <br> 1 – Разрешен доступ только к параметрам
+            группы LVOP <br>
+            2 – Разрешен доступ только к SP</td>
+        </tr>
+        <tr>
+          <td colspan="1">WtPt</td>
+          <td colspan="4">Защита параметров от изменения <sup style="font-size: 10px;">4)</sup></td>
+          <td colspan="7">0 – Разрешено изменение всех параметров. <br> 1 – Запрещено изменение всех параметров
+            кроме параметров группы LVOP. <br>
+            2 – Запрещено изменение всех параметров
+            кроме R-S и SP <br>
+            3 – Запрещено изменение всех параметров
+            кроме уставки SP <br>
+            4 – Запрещено изменение всех параметров</td>
+        </tr>
+        <tr>
+          <td colspan="1">EdPt</td>
+          <td colspan="4">Защита отдельных пара- метров от просмотра и изменения</td>
+          <td colspan="3">OFF <br> On</td>
+          <td colspan="4">Выключена <br> Включена</td>
+        </tr>
+        <!-- <tr>
+            <td colspan="1"></td>
+            <td colspan="4"></td>
+            <td colspan="3"></td>
+            <td colspan="4"></td>
+          </tr> -->
+      </table>
+      <p><sup style="font-size: 10px;">1)</sup> Параметры отображаются с десятичной точкой, положение которой
+        определяется параметром DP1</p>
+      <p><sup style="font-size: 10px;">2)</sup>Параметры отображаются с десятичной точкой, положение которой
+        определяется параметром DP2</p>
+      <p><sup style="font-size: 10px;">3)</sup>Неизменяемые параметры, не отображаемые на ЦИ.</p>
+      <p class="last"><sup style="font-size: 10px;">4)</sup>По интерфейсу RS-485 возможно изменение значения всех параметров при
+        любых значениях OAPt, WtPt.</p>
+    </div>
+  </div>
+  <hr>
+  <footer style="display: flex; justify-content: space-between;">
+    <span>40</span>
+    <a href="#" target="_blank">OWEN.RU</a>
+  </footer>
+
+
+
+  </script>
+</body>
+
+</html>

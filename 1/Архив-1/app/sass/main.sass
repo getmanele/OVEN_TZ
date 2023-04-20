@@ -1,0 +1,85 @@
+body
+    margin: 150px
+    font-family: 'Roboto', sans-serif
+    box-sizing: border-box
+    font-weight: 300
+h1
+    color: #4b4b4b
+    font-weight: 500
+    font-size: 30px
+    text-transform: uppercase
+.bold
+    font-weight: 900
+.table
+    display: flex
+    justify-content: space-between
+    margin-bottom: 40px
+p
+    font-weight: 500
+    font-size: 14px
+    line-height: 14px
+    margin: 5px 0
+thead th
+    background-color: #c4c4c4
+.table_title__all
+    display: flex
+    justify-content: space-between
+    margin-bottom: 10px
+    padding: 5px 10px
+    background-color: #068a68fc
+.table__left, .table__right
+    width: 48%
+    
+.table_title
+    color: white
+    font-size: 28px
+    line-height: 28px
+    align-self: center
+    font-weight: 900
+.table_title2
+    color: #fff
+    font-size: 16px
+    font-weight: 900
+footer span
+    font-weight: 900
+    font-size: 24px
+footer a
+    text-decoration: none
+    color: #c3c3c3
+    font-weight: 500
+    font-size: 30px
+
+@media screen and (max-width: 1400px)
+    body
+        margin: 40px 20px
+    .table
+        flex-direction: column
+        align-items: center
+    .table__left, .table__right
+        width: 100%
+    .table__left
+        margin-bottom: 50px
+
+@media screen and (max-width: 900px)
+    .table
+        width: 100%
+        overflow-x: scroll
+        // margin: 0 auto
+
+@media screen and (max-width: 768px)
+    h1
+        font-size: 24px
+        text-align: center
+    .table_title__all
+        flex-direction: column
+        align-items: center
+        width: 444px
+    .table_title
+        text-align: center
+        font-size: 20px
+    .table_title2 br
+        display: none
+    
+    //scroll сливается с нижней строчкой параграфа
+    .table__right p:nth-last-child(n)
+        margin-bottom: 20px
